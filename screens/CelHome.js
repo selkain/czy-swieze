@@ -20,23 +20,23 @@ export default function CelHome() {
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
         <View style={styles.welcomeContainer}>
-          <Image
+          {/* <Image
             source={
               __DEV__
                 ? require('../assets/images/Logo-Czy-świeze.png')
                 : require('../assets/images/Logo-Czy-świeze.png')
             }
             style={styles.welcomeImage}
-          />
+          /> */}
         </View>
 
         <View style={styles.getStartedContainer}>
           <DevelopmentModeNotice />
 
-          <Image
+          {/* <Image
           style={{width: 200, height: 200}}
          source={{uri: 'https://i.ibb.co/pvj9STp/69848870-550241452431291-1717534864502161408-n.jpg'}}
-        />
+        /> */}
 
           <Text style={styles.getStartedText}> </Text>
 
@@ -70,6 +70,7 @@ export default function CelHome() {
           <MonoText style={styles.codeHighlightText}>
             {/* navigation/MainTabNavigator.js */}
           </MonoText>
+
         </View>
       </View>
     </View>
