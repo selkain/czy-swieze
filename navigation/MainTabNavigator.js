@@ -4,9 +4,10 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
-import CelHome from '../screens/CelHome';
+// import LinksScreen from '../screens/LinksScreen';
+// import SettingsScreen from '../screens/SettingsScreen';
+import CelScreen from '../screens/CelScreen';
+import ParagonScreen from '../screens/ParagonScreen';
 
 
 const config = Platform.select({
@@ -39,7 +40,7 @@ HomeStack.path = '';
 
 const CelStack = createStackNavigator(
   {
-    Dodaj: CelHome,
+    Dodaj: CelScreen,
   },
   config
 );
@@ -59,46 +60,70 @@ CelStack.navigationOptions = {
 
 CelStack.path = '';
 
-
-
-
-const LinksStack = createStackNavigator(
+const ParagonStack = createStackNavigator(
   {
-    Links: LinksScreen,
+    Paragony: ParagonScreen,
   },
   config
 );
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Linki',
+ParagonStack.navigationOptions = {
+  tabBarLabel: 'Paragony',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios'
+          ? 'ios-filing' : 'md-filing'
+      }
+    />
   ),
 };
 
-LinksStack.path = '';
+ParagonStack.path = '';
 
-const SettingsStack = createStackNavigator(
-  {
-    Settings: SettingsScreen,
-  },
-  config
-);
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Ustawienia',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
-  ),
-};
 
-SettingsStack.path = '';
+
+// const LinksStack = createStackNavigator(
+//   {
+//     Links: LinksScreen,
+//   },
+//   config
+// );
+
+// LinksStack.navigationOptions = {
+//   tabBarLabel: 'Linki',
+//   tabBarIcon: ({ focused }) => (
+//     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
+//   ),
+// };
+
+// LinksStack.path = '';
+
+// const SettingsStack = createStackNavigator(
+//   {
+//     Settings: SettingsScreen,
+//   },
+//   config
+// );
+
+// SettingsStack.navigationOptions = {
+//   tabBarLabel: 'Ustawienia',
+//   tabBarIcon: ({ focused }) => (
+//     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
+//   ),
+// };
+
+// SettingsStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
-  HomeStack,
+
   CelStack,
-  LinksStack,
-  SettingsStack,
+  ParagonScreen,
+  HomeStack,
+  //LinksStack,
+  // SettingsStack,
 
 });
 

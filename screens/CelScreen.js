@@ -12,7 +12,7 @@ import {
 
 import { MonoText } from '../components/StyledText';
 
-export default function CelHome() {
+export default function CelScreen() {
   return (
 
     <View style={styles.container}>
@@ -79,7 +79,7 @@ export default function CelHome() {
 
 }
 
-CelHome.navigationOptions = {
+CelScreen.navigationOptions = {
   header: null,
 };
 
