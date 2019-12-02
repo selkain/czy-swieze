@@ -118,10 +118,9 @@ CelStack.path = '';
 // SettingsStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
-
+  HomeStack,
   CelStack,
   //ParagonScreen,
-  HomeStack,
   //LinksStack,
   // SettingsStack,
 
