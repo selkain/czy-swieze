@@ -7,7 +7,7 @@ import HomeScreen from '../screens/HomeScreen';
 // import LinksScreen from '../screens/LinksScreen';
 // import SettingsScreen from '../screens/SettingsScreen';
 import CelScreen from '../screens/CelScreen';
-import ParagonScreen from '../screens/ParagonScreen';
+// import ParagonScreen from '../screens/ParagonScreen';
 
 
 const config = Platform.select({
@@ -60,27 +60,27 @@ CelStack.navigationOptions = {
 
 CelStack.path = '';
 
-const ParagonStack = createStackNavigator(
-  {
-    Paragony: ParagonScreen,
-  },
-  config
-);
+// const ParagonStack = createStackNavigator(
+//   {
+//     Paragony: ParagonScreen,
+//   },
+//   config
+// );
 
-ParagonStack.navigationOptions = {
-  tabBarLabel: 'Paragony',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? 'ios-filing' : 'md-filing'
-      }
-    />
-  ),
-};
+// ParagonStack.navigationOptions = {
+//   tabBarLabel: 'Paragony',
+//   tabBarIcon: ({ focused }) => (
+//     <TabBarIcon
+//       focused={focused}
+//       name={
+//         Platform.OS === 'ios'
+//           ? 'ios-filing' : 'md-filing'
+//       }
+//     />
+//   ),
+// };
 
-ParagonStack.path = '';
+// ParagonStack.path = '';
 
 
 
@@ -120,7 +120,7 @@ ParagonStack.path = '';
 const tabNavigator = createBottomTabNavigator({
 
   CelStack,
-  ParagonScreen,
+  //ParagonScreen,
   HomeStack,
   //LinksStack,
   // SettingsStack,
