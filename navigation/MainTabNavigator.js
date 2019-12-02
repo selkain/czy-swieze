@@ -8,6 +8,7 @@ import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import CelHome from '../screens/CelHome';
 
+
 const config = Platform.select({
   web: { headerMode: 'screen' },
   default: {},
@@ -58,6 +59,9 @@ CelStack.navigationOptions = {
 
 CelStack.path = '';
 
+
+
+
 const LinksStack = createStackNavigator(
   {
     Links: LinksScreen,
@@ -95,6 +99,7 @@ const tabNavigator = createBottomTabNavigator({
   CelStack,
   LinksStack,
   SettingsStack,
+
 });
 
 tabNavigator.path = '';
