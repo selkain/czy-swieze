@@ -1,5 +1,6 @@
 import * as WebBrowser from 'expo-web-browser';
-import React from 'react';
+import React, { Component } from 'react';
+
 import {
   Image,
   Platform,
@@ -8,11 +9,16 @@ import {
   Text,
   TouchableOpacity,
   View,
+  TextInput
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
 
+
+
+
 export default function CelScreen() {
+  const [value, onChangeText] = React.useState('Useless Placeholder');
   return (
 
     <View style={styles.container}>
@@ -20,6 +26,14 @@ export default function CelScreen() {
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
         <View style={styles.welcomeContainer}>
+
+
+        <TextInput
+      style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+      onChangeText={text => onChangeText(text)}
+      value={value}
+    />
+
           {/* <Image
             source={
               __DEV__
@@ -99,7 +113,7 @@ function DevelopmentModeNotice() {
   } else {
     return (
       <Text style={styles.developmentModeText}>
-        You are not in development mode: your app will run at full speed.
+        {/* You are not in development mode: your app will run at full speed. */}
       </Text>
     );
   }
@@ -165,31 +179,31 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     textAlign: 'center',
   },
-  tabBarInfoContainer: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    ...Platform.select({
-      ios: {
-        shadowColor: 'black',
-        shadowOffset: { width: 0, height: -3 },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
-      },
-      android: {
-        elevation: 20,
-      },
-    }),
-    alignItems: 'center',
-    backgroundColor: '#fbfbfb',
-    paddingVertical: 20,
-  },
-  tabBarInfoText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    textAlign: 'center',
-  },
+  // tabBarInfoContainer: {
+  //   position: 'absolute',
+  //   bottom: 0,
+  //   left: 0,
+  //   right: 0,
+  //   ...Platform.select({
+  //     ios: {
+  //       shadowColor: 'black',
+  //       shadowOffset: { width: 0, height: -3 },
+  //       shadowOpacity: 0.1,
+  //       shadowRadius: 3,
+  //     },
+  //     android: {
+  //       elevation: 20,
+  //     },
+  //   }),
+  //   alignItems: 'center',
+  //   backgroundColor: '#fbfbfb',
+  //   paddingVertical: 20,
+  // },
+  // tabBarInfoText: {
+  //   fontSize: 17,
+  //   color: 'rgba(96,100,109, 1)',
+  //   textAlign: 'center',
+  // },
   navigationFilename: {
     marginTop: 5,
   },
