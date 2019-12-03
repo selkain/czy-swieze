@@ -8,11 +8,13 @@ import {
   Text,
   TouchableOpacity,
   View,
+  TextInput
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
 
 export default function CelHome() {
+  const [value, onChangeText] = React.useState('Useless Placeholder');
   return (
 
     <View style={styles.container}>
@@ -28,6 +30,12 @@ export default function CelHome() {
             }
             style={styles.welcomeImage}
           /> */}
+          <TextInput
+      style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+      onChangeText={text => onChangeText(text)}
+      value={value}
+    />
+
         </View>
 
         <View style={styles.getStartedContainer}>
