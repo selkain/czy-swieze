@@ -20,14 +20,14 @@ export default function CelHome() {
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
         <View style={styles.welcomeContainer}>
-          <Image
+          {/* <Image
             source={
               __DEV__
                 ? require('../assets/images/Logo-Czy-świeze.png')
                 : require('../assets/images/Logo-Czy-świeze.png')
             }
             style={styles.welcomeImage}
-          />
+          /> */}
         </View>
 
         <View style={styles.getStartedContainer}>
@@ -164,31 +164,31 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     textAlign: 'center',
   },
-  tabBarInfoContainer: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    ...Platform.select({
-      ios: {
-        shadowColor: 'black',
-        shadowOffset: { width: 0, height: -3 },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
-      },
-      android: {
-        elevation: 20,
-      },
-    }),
-    alignItems: 'center',
-    backgroundColor: '#fbfbfb',
-    paddingVertical: 20,
-  },
-  tabBarInfoText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    textAlign: 'center',
-  },
+  // tabBarInfoContainer: {
+  //   position: 'absolute',
+  //   bottom: 0,
+  //   left: 0,
+  //   right: 0,
+  //   ...Platform.select({
+  //     ios: {
+  //       shadowColor: 'black',
+  //       shadowOffset: { width: 0, height: -3 },
+  //       shadowOpacity: 0.1,
+  //       shadowRadius: 3,
+  //     },
+  //     android: {
+  //       elevation: 20,
+  //     },
+  //   }),
+  //   alignItems: 'center',
+  //   backgroundColor: '#fbfbfb',
+  //   paddingVertical: 20,
+  // },
+  // tabBarInfoText: {
+  //   fontSize: 17,
+  //   color: 'rgba(96,100,109, 1)',
+  //   textAlign: 'center',
+  // },
   navigationFilename: {
     marginTop: 5,
   },

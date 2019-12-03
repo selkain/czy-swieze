@@ -60,13 +60,13 @@ export default function HomeScreen() {
 
       <View style={styles.tabBarInfoContainer}>
         <Text style={styles.tabBarInfoText}>
-          This is a tab bar. You can edit it in:
+          {/* This is a tab bar. You can edit it in: */}
         </Text>
 
         <View
           style={[styles.codeHighlightContainer, styles.navigationFilename]}>
           <MonoText style={styles.codeHighlightText}>
-            navigation/MainTabNavigator.js
+            {/* navigation/MainTabNavigator.js */}
           </MonoText>
         </View>
       </View>
@@ -96,7 +96,7 @@ function DevelopmentModeNotice() {
   } else {
     return (
       <Text style={styles.developmentModeText}>
-        You are not in development mode: your app will run at full speed.
+        {/* You are not in development mode: your app will run at full speed. */}
       </Text>
     );
   }
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
   //   fontSize: 17,
   //   color: 'rgba(96,100,109, 1)',
   //   textAlign: 'center',
-  },
+  // },
   navigationFilename: {
     marginTop: 5,
   },
