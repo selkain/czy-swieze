@@ -93,8 +93,8 @@ SettingsStack.path = '';
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   CelStack,
-  LinksStack,
-  SettingsStack,
+  // LinksStack,
+  // SettingsStack,
 });
 
 tabNavigator.path = '';
